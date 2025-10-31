@@ -1,0 +1,24 @@
+<!--
+Sharing data between components:
+
+While developing realtime projects, we will be having a lot of components, where each component will
+do a seperate work, in order to achieve data sharing between the components, we have to use this. In this module, we 
+will learn how can we share data between the components
+
+-->
+
+<!--Using Input and Output Decorator-->
+<!--This we will use list component to print the input-->
+
+<form (submit)="onSubmit()">
+    <label for="">Car</label>
+    <input type="text" [(ngModel)]="carName" name="carName">
+    <button type="submit">Submit</button>
+</form>
+
+<!--
+using Service:
+1. Created a service named class
+2. 
+
+-->

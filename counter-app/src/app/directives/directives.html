@@ -1,0 +1,51 @@
+<h2>ngFor Example</h2>
+<ul>
+    <li *ngFor="let movie of movies">{{movie}}</li>
+</ul>
+
+<!--Index-->
+<h3>Index Example</h3>
+<ul>
+    <li *ngFor="let fruit of fruits; let i = index">
+        {{i+1}}.{{fruit}}
+    </li>
+</ul>
+
+<!--First and Last Variables-->
+<h3>First and Last Example</h3>
+<ul>
+    <li *ngFor="let fruit of fruits; let isFirst = first; let isLast = last;">
+       <strong *ngIf="isFirst">First:</strong>
+       <strong *ngIf="isLast">Last:</strong>
+        {{fruit}}
+    </li>
+</ul>
+
+<!--Even and Odd Variables-->
+<h2>ngFor Example</h2>
+
+<h3>Even and odd Variables</h3>
+<ul>
+    <li *ngFor="let fruit of fruits; let isEven = even; let isOdd = odd"
+    [ngClass]="{'even-item' : isEven, 'odd-item' : isOdd}"
+    >
+        {{fruit}}
+    </li>
+</ul>
+<!--ngIf and ngModel-->
+<h2>ngIf Example</h2>
+<input type="checkbox" [(ngModel)]="showMe">
+<p *ngIf="showMe">Can you see me?</p>
+
+<p [ngClass]="['primary','big']">Sample text</p>
+<input type="checkbox" [(ngModel)]="applyCondition">
+<p [ngClass]="{'condition-color': applyCondition}">On Condition</p>
+
+<!--ngStyle-->
+
+<p [ngStyle]="{'color' : 'green', 'font-size':'40px'}">styling using ngStyle</p>
+
+<h2>Custom Directive Example</h2>
+
+<p [appHighlight]="'lightblue'">Hover over this text to see the highlight effect</p>
+<p [appHighlight]="'lightgreen'">This text will be highlighted in light green</p>

@@ -1,0 +1,39 @@
+<!-- Pipes-->
+ <!--Pipes are used to manipulate the data from the template, for eg, we a 
+ date value like Sat Apr 22 2023 16:17:51 GMT.., we have to make it look different in template.
+ We can use date pipe for this, using this we can make it show like however we want it to be displayed
+ like Apr 22, 2016 
+ Take another example there is a string like apple, if we wanna convert it into uppercase, there is a pipe
+ called UPPERCASE pipe, where it will convert it into uppercase and it will display it like APPLE
+ same there is smallercase pipe. As like this there is a lot of pipes, we will learn it one by one-->
+
+<!--Date Pipe-->
+<h2>Date Pipe</h2>
+<p>Unformatted Date: {{toDate}}</p>
+<p>Formatted Date: {{toDate|date}}</p>
+<p>Medium Date: {{toDate|date:'medium'}}</p>
+<p>Short Date: {{toDate|date:'short'}}</p>
+<p>Full Date: {{toDate|date:'fullDate'}}</p>
+<!--much more formats are there refer to angular documentation for more formats-->
+
+<!--Slice Pipe-->
+<h2>Slice Pipe</h2>
+<p>Default Text: {{title}}</p>
+<p>Getting hello: {{title|slice:0:5}}</p>
+
+<h4>Item List</h4>
+<ul>
+    <li *ngFor="let item of items|slice:0:3">{{item}}</li>
+</ul>
+
+<!--Uppercase and Lowercase pipes-->
+<h2>Uppercase and Lowercase Pipes</h2>
+<p>Default text: {{word}}</p>
+<p>Uppercase: {{word|uppercase}}</p>
+<p>Lowercase: {{word|lowercase}}</p>
+
+<!--Currency Pipe-->
+<h2>Currenct Pipe</h2>
+<p>price without formatting: {{price}}</p>
+<p>price with currency pipe: {{price|currency}}</p>
+<p>Indian Currency: {{price|currency:'INR'}}</p>
